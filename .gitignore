@@ -1,0 +1,14 @@
+# OS / editor
+.DS_Store
+.vscode/
+*.swp
+
+# Secrets (never commit)
+.env
+*.pem
+id_rsa
+id_ed25519
+*.key
+
+# Logs
+*.log
