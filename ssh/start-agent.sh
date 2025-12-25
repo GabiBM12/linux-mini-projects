@@ -11,32 +11,6 @@ echo "== SSH Agent Starter =="
 
 # If we're already connected to an agent, show status
 if [[ -n "${SSH_AUTH_SOCK:-}" ]]; then
-  if ssh-add -l >/dev/null 2>&1; then
-    echo "[OK] Agent is available in this shell."
-    ssh-add -l || true
-    return 0 2>/dev/null || exit 0
-  fi
-fi
-
-echo "[INFO] Starting a new ssh-agent..."
-eval "$(ssh-agent -s)" >/dev/null
-
-if [[ ! -f "$KEY_PATH" ]]; then
-  echo "[ERROR] Key not found: $KEY_PATH"
-  return 1 2>/dev/null || exit 1
-fi
-
-ssh-add "$KEY_PATH"
-
-echo "[OK] Agent started and key added."
-ssh-add -l || true
-
-KEY_PATH="${1:-$HOME/.ssh/id_ed25519}"
-
-echo "== SSH Agent Starter =="
-
-# If we're already connected to an agent, show status
-if [[ -n "${SSH_AUTH_SOCK:-}" ]]; then
     if ssh-add -l >/dev/null 2>&1; then
         echo "[OK] Agent is available in this shell (SSH_AUTH_SOCK is set)."
         echo "Loaded keys:"
