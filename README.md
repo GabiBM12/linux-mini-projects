@@ -23,7 +23,7 @@ Typical use:
 bash
 bash linux-hardening/audit-ssh.sh
 
-        2. [`linux-hardening/ssh-harden.sh`](./linux-hardening/ssh-harden.sh)
+  2. [`linux-hardening/ssh-harden.sh`](./linux-hardening/ssh-harden.sh)
 
 Purpose: apply safer SSH defaults on the VM.
 
@@ -41,7 +41,7 @@ bash
 bash linux-hardening/ssh-harden.sh
 Important: Always keep an active SSH session open when hardening SSH, in case you need to rollback.
 
-          3. [`linux-hardening/fail2ban.sh`](./linux-hardening/fail2ban.sh)
+  3. [`linux-hardening/fail2ban.sh`](./linux-hardening/fail2ban.sh)
 
 Purpose: install and configure Fail2ban to temporarily ban IPs that repeatedly fail SSH authentication.
 
