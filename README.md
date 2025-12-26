@@ -18,7 +18,7 @@ What it checks (high level):
 - Authentication limits (e.g., `MaxAuthTries`, `LoginGraceTime`)
 - File permissions on SSH config and keys (common misconfigurations)
 Typical use:
-```bash
+bash
 bash linux-hardening/audit-ssh.sh
 
         2. `linux-hardening/ssh-harden.sh`
@@ -35,7 +35,7 @@ What it typically does:
 
 Typical use:
 
-```bash
+bash
 bash linux-hardening/ssh-harden.sh
 Important: Always keep an active SSH session open when hardening SSH, in case you need to rollback.
 
@@ -50,7 +50,7 @@ What it typically does:
 -	Shows status and basic verification commands
 
 Typical use:
-```bash
+`bash
 sudo bash linux-hardening/fail2ban.sh
 
 
