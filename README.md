@@ -4,10 +4,11 @@ A collection of small, practical Linux scripts and notes used in day-to-day clou
 
 ## Projects
 
-- [`ssh/`](./ssh) — 1 .ssh/start-agent.sh` — starts `ssh-agent` (or reuses an existing one) and loads a key so Git/SSH works smoothly
+- [`ssh/`](./ssh) — 1 .ssh/start-agent.sh — starts `ssh-agent` (or reuses an existing one) and loads a key so Git/SSH works smoothly
 
-- [linux-hardening/] -This folder contains hardening scripts I use on an Azure Linux VM to improve security and reduce common risks.
-       1. `linux-hardening/audit-ssh.sh`
+- [`linux-hardening/`](./linux-hardening) -This folder contains hardening scripts I use on an Azure Linux VM to improve security and reduce common risks.
+
+   1. [`linux-hardening/audit-ssh.sh/'](./linux-hardening/audit-ssh,sh)
 
 Purpose: audit the current SSH configuration and print a human-readable report.
 What it checks (high level):
